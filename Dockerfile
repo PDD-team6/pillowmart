@@ -1,23 +1,12 @@
-# Use the official Node.js image as the base image
-FROM node:14
+FROM node:latest
 
-# Set the working directory for the backend
-WORKDIR /app
+WORKDIR /usr/src/app
 
-# Copy the backend package.json and package-lock.json
-COPY backend/package*.json ./
+COPY package.json ./
 
-# Install backend dependencies
 RUN npm install
 
-# Copy the backend code to the container
-COPY backend/. .
+COPY . .
 
-# Copy the frontend code to the public directory in the backend
-COPY frontend/. ./public
-
-# Expose the port on which the app will run
-EXPOSE 3000
-
-# Start the Node.js application
-CMD ["node", "app.js"]
+EXPOSE 4000
+CMD [ "node", "index.js" ]
