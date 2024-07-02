@@ -3,5 +3,5 @@ export const connect =createPool({
     host:'localhost',
     user:'root',
     password:'pillowmart@234',
-    database:'pillowmart'
+    database:'pillowmart_11'
 }).promise();
