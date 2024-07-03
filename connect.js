@@ -2,6 +2,6 @@ import { createPool } from "mysql2";
 export const connect =createPool({
     host:'localhost',
     user:'root',
-    password:'pillowmart@234',
+    password:'pillow@234',
     database:'pillowmart77'
 }).promise();
